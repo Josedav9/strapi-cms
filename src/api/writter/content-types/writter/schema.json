@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "writters",
+  "info": {
+    "singularName": "writter",
+    "pluralName": "writters",
+    "displayName": "Writter"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "Avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "blog": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blog.blog",
+      "mappedBy": "writter"
+    }
+  }
+}
